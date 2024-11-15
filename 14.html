@@ -1,0 +1,44 @@
+//email validation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!-- \d - match any digit (equal to [0-9])
+            \w - match any word character (a-z,A-z,0-9, & _)
+            \s - match whitespaces character(eg: spaces and tabs)
+             \t - match a tab only 
+        -->
+    
+    <script type="text/javascript">
+        function validate(){
+            let num = document.getElementById("no").value; 
+            // let regx = /E00/i; // 'i' for accepting e00 also not casesensitive
+            // let regx = /[a-z A-Z]E00/i; //having that letters starting
+             let regx = /^([a-z 0-9\.-]+)@([a-z 0-9\.]+).([a-z]{2,8})([a-z]{2,8})?$/; //^ represents not having that letters starting , ? represents last part is optional
+            if(regx.test(num)){
+                document.getElementById("first").innerHTML="Valid";
+                document.getElementById("first").style.visibility="visible";
+                document.getElementById("first").style.color="green";
+            }
+            else{
+                // alert("Invalid username");
+                document.getElementById("first").innerHTML="InValid";
+                document.getElementById("first").style.visibility="visible";
+                document.getElementById("first").style.color="red";
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="11.html">
+        <input id="no" placeholder="mobileno" type="text">
+        <label id="first" style="color: red; visibility: hidden;" for="">Invalid</label>
+        <br><br>
+        <button onclick="validate()" type="button">submit</button>
+    </form>
+</body>
+</html>

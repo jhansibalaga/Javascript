@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius aperiam!</p>
+    <div class="container1" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis placeat id rerum architecto iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <div class="container1" style="border: 2px solid blue; width: 100px; height: 100px; color: magenta;">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>fourth</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container2" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <br>
+    <div>
+        <ol>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+            <li>fourth item</li>
+        </ol>
+    </div>
+    <button id="btn1">click me</button>
+    <button id="btn2">chaining effects</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        // ============== callback function ============
+          $("#btn1").click(function(){
+            $(".container").toggle(200,function(){ //the function known as callback function without the callback function alert method first executed before toggle happens
+                alert("toggle is done")
+            })
+          }) 
+
+                   
+
+        //     $("#btn1").click(function(){
+        //     $(".container").toggle(200,printmsg)//the function known as callback function without the callback function alert method first executed before toggle happens
+        //   }) 
+
+        //   function printmsg(){
+        //     alert("toggle is done");
+        //   }
+
+        // ==============chaining effects=================
+        $("#btn2").click(function(){
+            $(".container1").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(3000);
+
+          }) 
+
+    });
+</script>
+</html>

@@ -1,0 +1,49 @@
+<!-- fade in and fade out -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script type="text/javascript">
+
+     var opacity=0;
+     var intervalID=0;
+     
+     function hide(){
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity>0){
+            opacity=opacity-0.1;
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(intervalID)
+        }
+     }
+     function fadeout(){
+        intervalID = setInterval(hide,200)   
+     }
+     function fadein(){
+        intervalID = setInterval(show,200);
+     } 
+     function show(){
+        var img = document.getElementById("img1");
+        opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity<1){
+            opacity=opacity+0.1;
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(intervalID);
+        }
+     }
+     
+</script>
+</head>
+<body>
+    <button onclick="fadeout()">fadeout</button>
+    <img  id="img1" src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="error" style="width: 100px; height: 100px;">
+    <button onclick="fadein()">fadein</button>
+</body>
+</html>

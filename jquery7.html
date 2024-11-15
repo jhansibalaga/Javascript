@@ -1,0 +1,40 @@
+<!-- jquery DOM manipulations -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container1" style="border: 2px solid blue;" value="hello">
+        <p id="p1" style="color:blue;" class="container1">Lorem ipsum dolor sit amet consectetur <b>adipisicing elit</b>. Rem perferendis placeat id rerum <i>architecto</i> iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <!-- <button id="btn1">action</button> -->
+     <button id="btn1">setvalue</button>
+     <button id="btn2">getvalue</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn2").click(function(){
+            // alert($("#p1").text());// text method is used to show the text in alert box
+            // alert($("#p1").text("hello world")); // it changes the paragraph text to hello world
+            // alert($("#p1").html()); // same as text method but it also shows the html tags we used inside the text
+               alert($("#p1").attr("class")); // it will displays the attribute values in alert box
+            //    alert($("#p1").css("font-family")); //it will displays the css values what we are used for paragraph
+            //    alert($("#p1").css("font-size"));
+            //    alert($("#p1").css("font-weight"));
+            //   alert($("#p1").css("color"));
+        })
+        $("#btn1").click(function(){
+            // $("#p1").css("color","red");
+            // $("#p1").css("font-size","30px");
+             $("#p1").attr("class","hello"); //we can change the values also
+
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius aperiam!</p>
+    <div class="container" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis placeat id rerum architecto iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <div class="container" style="border: 2px solid blue; width: 100px; height: 100px; color: magenta;">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>fourth</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container2" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <br>
+    <div>
+        <ol>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+            <li>fourth item</li>
+        </ol>
+    </div>
+    <button id="btn1">click me1</button>
+    <button id="btn2">click me2</button>
+    <button id="btn3">toggle</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        //   $("#btn1").click(function(){
+        //     $(".container").hide() // it will hide the content of container class
+        //   })
+
+        //   $("#btn2").click(function(){
+        //     $(".container").show() // it will show the content
+        //   })
+
+        //   $("#btn3").click(function(){
+        //     $(".container").toggle() // it will do toggle means if the content is visible it hide if the content is hide it will show(both hide and show methods)
+        //   })
+          $("#btn1").click(function(){
+            $(".container").slideUp() // it will show the content
+          })
+          $("#btn2").click(function(){
+            $(".container").slideDown() // it will show the content
+          })
+          $("#btn3").click(function(){
+            $(".container").slideToggle() // it will show the content
+          })
+          
+    });
+</script>
+</html>

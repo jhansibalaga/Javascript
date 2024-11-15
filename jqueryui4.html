@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Autocomplete example</h1>
+    <label for=""><b>Enter Your Favourite City : </b></label>
+    <input type="text" id="city">
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-ui-1.14.0/jquery-ui.js"></script>
+<script>
+    var text =["mumbai","pune","new delhi","indore","mysore",
+    "new york","tokyo","goa","vizag" ]
+        $("#city").autocomplete({            
+            source:text, // we can provide source like this or we can give that array here also
+            autoFocus:true,//it automatically focus the names we typed
+            delay:200,//delaytime to get the options
+            minLength:3 //providing minmum length to get the options
+        });
+</script>
+</html>

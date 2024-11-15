@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius aperiam!</p>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis placeat id rerum architecto iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <div class="container">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <br>
+    <button id="btn1">click me</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){ //when we right all code in between this function then actions(events) will be worked after completely loading the website
+     
+        // $("#btn1").click(fn1); onclick event
+        //  $("#btn1").dblclick(fn1);  doubleclick event it works when we double click on it
+        //  $("#btn1").mouseenter(fn1); onmouseover event
+        //  $("#btn1").mouseleave(fn1); onmouseout event
+         $("#btn1").hover(fn1); // onmouseover,onmouseout both are works
+
+       
+
+    function fn1(){
+        $("p").fadeToggle();
+    }
+
+    });
+    
+</script>
+</html>

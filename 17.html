@@ -1,0 +1,32 @@
+<!-- incrementing and decrementing the count -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+       let count=0;
+        function inc(){
+           id=document.getElementById("inc").innerHTML=count;
+           count++;
+           
+        }
+        
+        function dec(){
+            id--;
+            document.getElementById("inc").innerHTML=id;
+            
+           
+           
+        }
+
+
+    </script>
+</head>
+<body>
+  <p id="inc">count</p>
+    <button id="inc" type="button" onclick="inc()">incre</button>
+    <button id="dec" type="button" onclick="dec()">decrese</button>
+</body>
+</html>

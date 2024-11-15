@@ -1,0 +1,33 @@
+//employee id, names validation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function validate(){
+            let username = document.getElementById("uname").value; 
+            // let regx = /E00/i; // 'i' for accepting e00 also not casesensitive
+            // let regx = /[a-z A-Z]E00/i; //having that letters starting
+             let regx = /[^1-10 a-z]E00/i //^ represents not having that letters in starting
+            if(regx.test(username)){
+                alert("valid username");
+            }
+            else{
+                // alert("Invalid username");
+                document.getElementById("first").style.visibility="visible";
+
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form action="11.html">
+        <input id="uname" placeholder="username" type="text">
+        <label id="first" style="color: red; visibility: hidden;" for="">Invalid username</label>
+        <button onclick="validate()" type="button">submit</button>
+    </form>
+</body>
+</html>

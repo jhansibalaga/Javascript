@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.structure.css">
+    <link rel="stylesheet" href="jquery-ui-1.14.0/jquery-ui.theme.css">
+</head>
+<body>
+    <h1>Tootip example</h1>
+    <img  id="img1" title="nature" src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="error" width="100px" height="100px">
+</body>
+<script src="jquery.js"></script>
+<script src="jquery-ui-1.14.0/jquery-ui.js"></script>
+<script>
+    $("#img1").tooltip({
+        // track:true,
+        // show:{effect:"bounce",duration:200}
+        // show:{effect:"explode",duration:2000}
+        // show:{effect:"blind",duration:2000}
+        // show:{effect:"highlight",duration:3000}
+         show:{effect:"bounce",duration:2000},
+         hide:{effect:"explode",duration:2000}
+    });
+</script>
+</html>

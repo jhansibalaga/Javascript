@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Append() - inserts the content at the end of the selected elements
+    After()  - inserts content after the selected elements
+    Prepend() - inserts content at the beginning of the selected elements
+    before() - inserts the content before the selected elements
+    remove() - removes the total selected element and its child elements
+    empty() - removes the content of the selected elements
+    -->
+    <div class="container1" style="border: 2px solid blue;">
+        <p id="p1" style="color:blue;">Lorem ipsum dolor sit amet.           
+        </p>
+        <p id="p2">appending the new text</P>
+    </div>
+    <br>
+     <button id="btn1">Append</button>
+     <button id="btn2">After</button>
+     <button id="btn3">Prepend</button>
+     <button id="btn4">Before</button>
+     <button id="btn5">Remove</button>
+     <button id="btn6">Empty</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+            $(".container1").append("<p id='p3'>appending the new text</P>");
+        })
+        $("#btn2").click(function(){
+            $(".container1").after("<p>after the old text</p>");
+        })
+        $("#btn3").click(function(){
+            $(".container1").prepend("<p>prepending the new text</p>");
+        })
+        $("#btn4").click(function(){
+            $(".container1").before("<p>before the old text</p>");
+        })
+        // $("#btn5").click(function(){
+        //     $(".container1").remove();
+        // })
+        $("#btn5").click(function(){
+            $("p").remove("#p3 , #p2");
+        })
+        $("#btn6").click(function(){
+            $(".container1").empty();
+        })
+    })
+</script>
+</html>

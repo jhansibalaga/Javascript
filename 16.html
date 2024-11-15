@@ -1,0 +1,66 @@
+<!-- form validations -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // let seconds=0;
+        // function clickme(){
+        //     alert("successfully submitted");
+        // }
+        // function displaymsg(){
+        //     document.getElementById("s1").innerHTML= seconds+"seconds";
+        //     seconds++;
+        // }
+        // function start(){
+        //     window.setInterval(displaymsg,1000);
+
+        // }
+        function validate(){
+            let name=document.getElementById("name");
+            let pass=document.getElementById("pass");
+            if(name.value.trim()=="")
+           { 
+                // alert("username should not be empty")
+                name.style.border="solid red 2px";
+                document.getElementById("l1").style.visibility="visible";               
+                return false;
+           }
+            
+            else if(pass.value.trim()=="")
+           {
+                // alert("password should not be empty")
+                pass.style.border="solid red 2px";
+                document.getElementById("l2").style.visibility="visible";
+                return false;
+           }
+            
+            else if(pass.value.trim().length<5){            
+                return false;
+            }
+            else
+                return true;
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form action="12.html" onsubmit="return validate()">
+        <input id="name" type="text" placeholder="username">
+        <label id="l1" style="color: red;visibility: hidden;">Username should not be empty</label>
+        <input id="pass" type="password" placeholder="password">
+        <label id="l2" style="color: red; visibility: hidden;">password should not be empty</label>
+        <button type="submit">Submit</button>
+        <button  onclick="start()" type="button">start</button>
+        <h2 id="s1">text</h2>
+       
+        
+    </form>
+    
+</body>
+</html>

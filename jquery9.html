@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery9.css">
+</head>
+<body>
+    <!-- Addclass() - adds one or more classes to the selected elements
+    Removeclass() - removes one or more classes from the selected elements
+    Toggleclass() - toggles between adding/removing classes from the selected elements -->
+    <div class="container1">
+        <p id="p1" style="color:blue;">Lorem ipsum dolor sit amet.           
+        </p>
+        <p id="p2">appending the new text</P>
+    </div>
+    <br>
+     <button id="btn1">Addclass</button>
+     <button id="btn2">Removeclass</button>
+     <button id="btn3">Toggleclass</button>
+     
+</body>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+          $(".container1").addClass("container2") //we can add multiple classes also by putting comma 
+        });
+        $("#btn2").click(function(){
+          $(".container1").removeClass("container2")
+        });
+        $("#btn3").click(function(){
+          $(".container1").toggleClass("container2")
+        });
+    })
+  </script>
+</html>

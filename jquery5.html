@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius aperiam!</p>
+    <div class="container" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis placeat id rerum architecto iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <div class="container1" style="border: 2px solid blue; width: 100px; height: 100px; color:red; background-color: greenyellow; opacity: 0.4;">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+            <li>fourth</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container2" style="border: 2px solid blue;">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <br>
+    <div>
+        <ol>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+            <li>fourth item</li>
+        </ol>
+    </div>
+    <button id="btn1">click me1</button>
+    <button id="btn2">click me2</button>
+    <button id="btn3">animate</button>
+</body>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(function(){
+       $("#btn3").click(function(){
+        $(".container1").animate({
+            left:'150px',
+            padding:'30px',
+            opacity:'1',
+            width:'150px',
+            height:'150px'
+        })
+            
+       })
+    });
+</script>
+</html>

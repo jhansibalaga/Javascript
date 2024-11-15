@@ -1,0 +1,24 @@
+<!-- images onmouseover,onmouseout events -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function setnewone(){
+        document.getElementById("img1").src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+
+    }  
+    function setoldone(){
+        document.getElementById("img1").src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+    } 
+
+    </script>
+</head>
+<body>
+   
+   <img id="img1" onmouseover="setnewone()" onmouseout="setoldone()" src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="error" style="width: 100px; height: 100px;">
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jquery2.css">
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, eius aperiam!</p>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem perferendis placeat id rerum architecto iure labore accusamus in ipsam quod, minima fuga deleniti atque eligendi facere quas natus consequuntur quam.            
+        </p>
+    </div>
+    <br>
+    <div class="container">
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    </div>
+    <br>
+    <button onclick="fn1()">click me</button>
+    
+</body>
+<script src="jquery.js"></script>
+<script>
+    function fn1(){
+        // $(".container,p").fadeToggle();
+        // $("div > p").fadeToggle(); or $("div p").fadeToggle();
+        // $("p").fadeToggle();
+        // $(".container:even").fadeToggle();
+        // $("li:even").fadeToggle(); 
+        $("li:odd").fadeToggle(); 
+    }
+   
+</script>
+</html>
